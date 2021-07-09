@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="Index">
     <NuxtLink to="/about">About</NuxtLink>
   </div>
 </template>
 
 <script>
 const getPage = (vm, route) => {
-  vm.$children.forEach((el) => console.log(el._uid, el))
+  vm.$children.forEach((el) => console.log(el._uid, el.$el))
   return vm.$children.find(child => child.$route.name === route)
 }
 
