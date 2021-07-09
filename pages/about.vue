@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink to="/about">About</NuxtLink>
+    <NuxtLink to="/">Index</NuxtLink>
   </div>
 </template>
 
@@ -14,13 +14,13 @@ export default {
   transition: {
     mode: '',
     enter: function (el, done) {
-      const page = getPage(this, 'index')
-      console.log('index:enter', this._uid, page._uid)
+      const page = getPage(this, 'about')
+      console.log('about:enter', this._uid, page._uid)
       done()
     },
     leave: function (el, done) {
-      const page = getPage(this, 'index')
-      console.log('index:leave', this._uid, page)
+      const page = getPage(this, 'about')
+      console.log('about:leave', this._uid, page)
       done()
     },
   },
