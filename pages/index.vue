@@ -6,7 +6,7 @@
 
 <script>
 const getPage = (vm, route) => {
-  vm.$children.forEach((el) => console.log(el._name, el))
+  vm.$children.forEach((el) => console.log(el._uid, el))
   return vm.$children.find(child => child.$route.name === route)
 }
 
